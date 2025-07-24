@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía de Trámites - Sidebar Fijo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar-custom {
+            width: 250px;
+            background-color: #f4f7fa;
+            border-right: 1px solid #ccc;
+            padding: 20px;
+            position: fixed;
+            top: 70px;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar-custom h5 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-custom .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-custom .nav > li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-custom .nav a {
+            color: #004B81;
+            display: block;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .sidebar-custom .nav a.active,
+        .sidebar-custom .nav a:hover {
+            background-color: #004B81;
+            color: #fff;
+        }
+
+        .sidebar-custom ul ul {
+            padding-left: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        .contenido-principal {
+            margin-left: 250px;
+            padding: 2rem;
+            width: calc(100% - 250px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar fijo -->
+    <aside class="sidebar-custom">
+        <h5>Categorías</h5>
+        <ul class="nav flex-column">
+            <li><a class="active" href="#">Administración Pública</a>
+                <ul>
+                    <li><a href="#">Agentes municipales</a></li>
+                    <li><a href="#">Edificios alquilados</a></li>
+                    <li><a href="#">Funcionarios</a></li>
+                    <li><a href="#">Legislación</a></li>
+                    <li><a href="#">Plan de Metas</a></li>
+                    <li><a href="#">Reportes de gestión</a></li>
+                    <li><a href="#">Resultados Electorales</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Medio Ambiente</a></li>
+            <li><a href="#">Salud</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+        <h1>Contenido principal</h1>
+        <p>Acá va el contenido general de la página. Esta sección se adapta al costado de la barra lateral fija.</p>
+    </main>
+
+</div>
+
+</body>
+</html>
